@@ -5,7 +5,7 @@ import time
 
 app = Flask(__name__)
 
-ticker = 'AAPL'  # Apple Inc.
+ticker = 'BTC-USD'  # Apple Inc.
 stock_price = 0.0
 
 def fetch_stock_price():
@@ -14,7 +14,7 @@ def fetch_stock_price():
         stock = yf.Ticker(ticker)
         stock_info = stock.history(period='1d')
         stock_price = stock_info['Close'].iloc[-1]
-        time.sleep(1)  # Refresh every 10 seconds
+        time.sleep(1)  # Refresh every 1 seconds
 
 @app.route('/')
 def index():
@@ -32,7 +32,7 @@ def index():
                     .then(data => {
                         document.getElementById('price').textContent = 'Price: ' + data.price;
                     });
-                }, 1000);  // Refresh every 10 seconds
+                }, 1000);  // Refresh every 1 seconds
             </script>
         </head>
         <body>
