@@ -12,7 +12,7 @@ def refresh_stock_price(ticker, interval):
         print(f'Ticker: {ticker} | Price: {price}') 
         time.sleep(interval)
 
-ticker = 'AAPL'# Apple Inc.
-interval = 10 # Refresh every 10 seconds
+ticker = 'BTC-USD'# Bitcoin currency
+interval = 1 # Refresh every 1 seconds
 
 refresh_stock_price(ticker, interval)
